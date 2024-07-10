@@ -47,6 +47,7 @@ public class LoginPageStepDefs {
             Assert.assertTrue(loginPage.checkBox_rememberMe.isDisplayed());
         }
 
+
        @Then("user should be able to see Remember me checkbox clicked")
         public void user_should_be_able_to_see_checkbox_clicked() {
            loginPage.checkBox_rememberMe.click();
