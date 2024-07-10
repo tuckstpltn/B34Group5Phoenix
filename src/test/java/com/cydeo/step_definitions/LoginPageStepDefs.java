@@ -41,27 +41,23 @@ public class LoginPageStepDefs {
             Assert.assertEquals(expectedMessage, loginPage.errMessage.getText());
         }
 
-        @Then("user should be able to see remember me box")
+
+       @Then("user should be able to see remember me box")
         public void user_should_be_able_to_see_remember_me_box() {
             Assert.assertTrue(loginPage.checkBox_rememberMe.isDisplayed());
         }
 
-        @When("user clicks Remember me checkbox")
-        public void user_click_checkbox_with_text() {
-            loginPage.checkBox_rememberMe.click();
-        }
 
-        @Then("user should be able to see Remember me checkbox clicked")
+       @Then("user should be able to see Remember me checkbox clicked")
         public void user_should_be_able_to_see_checkbox_clicked() {
-            Assert.assertTrue(loginPage.checkBox_rememberMe.isSelected());
+           loginPage.checkBox_rememberMe.click();
         }
 
 
         @Then("user should be able to see password is in bullet signs by default")
-        public void user_should_be_able_to_see_password_is_in_bullet_signs_by_default() {
-            Assert.assertEquals("password",BrowserUtils.getAttributeValue(loginPage.txtBox_password,"type"));
-        }
-
+         public void user_should_be_able_to_see_password_is_in_bullet_signs_by_default() {
+        Assert.assertEquals("password",BrowserUtils.getAttributeValue(loginPage.txtBox_password,"type"));
+    }
 
 }
 

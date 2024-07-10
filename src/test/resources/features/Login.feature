@@ -27,3 +27,4 @@ Feature: As a user, I should be able to login.
     Then user should be able to see remember me box
     Then user should be able to see Remember me checkbox clicked
     Then user should be able to see password is in bullet signs by default
+
