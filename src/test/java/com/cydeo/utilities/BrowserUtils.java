@@ -487,6 +487,11 @@ import java.util.Set;
         }
 
 
+        public static String getAttributeValue(WebElement webElement, String attribute) {
+
+            return webElement.getAttribute(attribute);
+        }
+
     }
 
 

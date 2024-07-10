@@ -1,6 +1,6 @@
 package com.cydeo.step_definitions;
 
-import com.cydeo.pages.BingSearchPage;
+import com.cydeo.pages.BingSearchPageExample;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -10,7 +10,7 @@ import org.openqa.selenium.Keys;
 
 public class Bing_StepDefinitionsExample {
 
-    BingSearchPage bingSearchPage = new BingSearchPage();
+    BingSearchPageExample bingSearchPage = new BingSearchPageExample();
 
     @Given("user is on Bing search page")
     public void user_is_on_bing_search_page() {
