@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class FunctionsCompanyStructureStepDef {
 
@@ -29,5 +30,6 @@ public class FunctionsCompanyStructureStepDef {
 
     @Then("user should see created department")
     public void userShouldSeeCreatedDepartment() {
+        Assert.assertTrue(functionsInCompanyStructurePage.name.isDisplayed());
     }
 }
