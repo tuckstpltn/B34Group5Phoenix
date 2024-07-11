@@ -14,3 +14,8 @@ Feature: As a user, I should be able to use functions on Company Structure under
         | helpdesk |
         | marketing|
 
+    Scenario: Verify that hr user can add a department from the Company Structure
+      When user logs in as "hr"
+      And user clicks "Employees"
+      And user add department with name "Department"
+      Then user should see created department
