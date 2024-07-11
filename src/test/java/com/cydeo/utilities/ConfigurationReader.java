@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationReader {
+
     //1- Create the Properties object (create object)
     //make it "private" so we are limiting access to the object
     //"static" is to make sure its created and loaded before everything else.
@@ -25,8 +26,6 @@ public class ConfigurationReader {
             System.out.println("FILE NOT FOUND WITH GIVEN PATH!!!");
             e.printStackTrace();
         }
-
-        //www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_target
     }
 
     //create a utility method to use the object to read
@@ -35,5 +34,4 @@ public class ConfigurationReader {
     public static String getProperty(String keyword){
         return properties.getProperty(keyword);
     }
-
 }
