@@ -1,35 +1,33 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.FunctionsInCompanyStructurePage;
 import com.cydeo.pages.LoginPage;
 import com.cydeo.utilities.BrowserUtils;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class FunctionsCompanyStructureStepDef {
 
-    LoginPage loginPage = new LoginPage();
+    FunctionsInCompanyStructurePage functionsInCompanyStructurePage = new FunctionsInCompanyStructurePage();
 
-    @Given("user is on the login page")
-    public void userIsOnTheLoginPage() {
-        System.out.println("DONE IN HOOKS");
-        //Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
+
+
+    @And("user clicks {string}")
+    public void userClicks(String employee) {
+        functionsInCompanyStructurePage.employees.click();
     }
 
-
-    @When("user logs in as {string}")
-    public void user_logs_in_as(String userType) {
-
-        loginPage.login(userType);
+    @And("user add department with name {string}")
+    public void userAddDepartmentWithName(String department) {
+    functionsInCompanyStructurePage.addDepartment.click();
+    functionsInCompanyStructurePage.name.sendKeys(department);
+    functionsInCompanyStructurePage.addButton.click();
     }
 
-
-
-    @Then("user should see the {string}")
-    public void userShouldSeeThe(String companyStructureTitle) {
-
-        BrowserUtils.verifyTitleContains(companyStructureTitle);
+    @Then("user should see created department")
+    public void userShouldSeeCreatedDepartment() {
     }
-
 }
