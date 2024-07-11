@@ -16,3 +16,12 @@ Feature: As a user, I should be able to use functions on Company Structure under
       And user clicks "Employees"
       And user add department with name "Department"
       Then user should see created department
+
+    Scenario Outline: Verify that the "ADD DEPARTMENT" button is not displayed for helpdesk and marketing users
+      When user logs in as "<userType>"
+      And user clicks "Employees"
+      Then user should not see ADD DEPARTMENT button
+      Examples:
+        | userType  | ADD DEPARTMENT |
+        | helpdesk  | ADD DEPARTMENT |
+        | marketing | ADD DEPARTMENT |
