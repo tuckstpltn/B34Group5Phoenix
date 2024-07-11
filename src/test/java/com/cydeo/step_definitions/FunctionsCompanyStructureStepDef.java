@@ -31,4 +31,5 @@ public class FunctionsCompanyStructureStepDef {
 
         BrowserUtils.verifyTitleContains(companyStructureTitle);
     }
+
 }

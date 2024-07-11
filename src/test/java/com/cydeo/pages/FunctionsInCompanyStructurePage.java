@@ -13,7 +13,6 @@ public class FunctionsInCompanyStructurePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
     @FindBy(xpath = "(//span[@class= 'main-buttons-item-text-title'])[1]")
     public WebElement companyStructureTitle;
 
