@@ -11,6 +11,8 @@ import org.junit.Assert;
 
 public class FunctionsCompanyStructureStepDef {
 
+
+
     FunctionsInCompanyStructurePage functionsInCompanyStructurePage = new FunctionsInCompanyStructurePage();
 
 
@@ -35,6 +37,11 @@ public class FunctionsCompanyStructureStepDef {
 
     @Then("user should see the {string}")
     public void userShouldSeeThe(String arg0) {
+        Assert.assertTrue(functionsInCompanyStructurePage.companyStructureTitle.isDisplayed());
+    }
+
+    @Then("user should see the {string} Employees page")
+    public void userShouldSeeTheEmployeesPage( String arg1) {
         Assert.assertTrue(functionsInCompanyStructurePage.companyStructureTitle.isDisplayed());
     }
 }
