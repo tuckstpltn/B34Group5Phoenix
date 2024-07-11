@@ -32,4 +32,9 @@ public class FunctionsCompanyStructureStepDef {
     public void userShouldSeeCreatedDepartment() {
         Assert.assertTrue(functionsInCompanyStructurePage.name.isDisplayed());
     }
+
+    @Then("user should see the {string}")
+    public void userShouldSeeThe(String arg0) {
+        Assert.assertTrue(functionsInCompanyStructurePage.companyStructureTitle.isDisplayed());
+    }
 }
