@@ -56,7 +56,7 @@ public class FunctionsCompanyStructureStepDef {
             Assert.assertFalse("ADD DEPARTMENT button should not be visible", functionsInCompanyStructurePage.addDepartment.isDisplayed());
         } catch (NoSuchElementException e) {
             // If the element is not found, that means it is not visible, which is expected
-            System.out.println("ADD DEPARTMENT button is not visible");
+            System.out.println("ADD DEPARTMENT button is not visible for helpdesk and marketing users");
         }
     }
 }
