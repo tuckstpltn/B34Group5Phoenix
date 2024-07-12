@@ -53,11 +53,10 @@ public class FunctionsCompanyStructureStepDef {
     @Then("user should not see ADD DEPARTMENT button")
     public void userShouldNotSeeADDDEPARTMENTButton() {
         try {
-            WebElement driver = null;
-            WebElement addButton = driver.findElement(By.xpath("(//span[.='Add department'])[1]"));
-            assertFalse("ADD DEPARTMENT button should not be visible", addButton.isDisplayed());
+            Assert.assertFalse("ADD DEPARTMENT button should not be visible", functionsInCompanyStructurePage.addDepartment.isDisplayed());
         } catch (NoSuchElementException e) {
-            // Element not found, which is expected
+            // If the element is not found, that means it is not visible, which is expected
+            System.out.println("ADD DEPARTMENT button is not visible");
         }
     }
 }
