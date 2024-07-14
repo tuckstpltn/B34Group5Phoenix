@@ -1,7 +1,7 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.HomePage;
-import com.cydeo.pages.LoginPage;
+
 import com.cydeo.pages.ProfilePage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
@@ -9,7 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
+
 
 public class ProfilePageStepDef {
 
