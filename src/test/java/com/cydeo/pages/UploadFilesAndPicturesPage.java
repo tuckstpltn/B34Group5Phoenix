@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class UploadFilesAndPicturesAsMessagesPage {
+public class UploadFilesAndPicturesPage {
 
 
-    public UploadFilesAndPicturesAsMessagesPage(){
+    public UploadFilesAndPicturesPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
