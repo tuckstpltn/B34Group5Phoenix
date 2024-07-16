@@ -10,10 +10,23 @@ public class LinkPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id ="//div[@id='feed-add-post-form-tab']")
+    @FindBy(xpath="(//div[@class='microblog-top-tabs-visible']//span[contains(.,'Message')])[1]")
     public WebElement LinkMessage;
 
-    @FindBy(xpath = "//*[@title='Link']")
+    @FindBy(id = "bx-b-link-blogPostForm")
     public WebElement AddLink;
 
+    @FindBy(id = "linkidPostFormLHE_blogPostForm-text")
+    public WebElement textbox;
+
+    @FindBy(xpath ="//input[@placeholder='Link URL']" )
+    public  WebElement Urlbox;
+
+    @FindBy(xpath = "//input[@class='adm-btn-save']")
+    public WebElement savebtn;
+
+    @FindBy(xpath = "//a[.='google']")
+    public WebElement googlelink;
+
     }
+
