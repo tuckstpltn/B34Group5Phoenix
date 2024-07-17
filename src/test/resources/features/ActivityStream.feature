@@ -16,7 +16,7 @@ Feature: Default
   @B34G5-132
   Scenario Outline: Verify that the user views the following options on the Activity Stream page.
     Given user logs in as "<userType>"
-    Then user should see "MESSAGE" "TASK" "POLL" "MORE" options
+    Then user should see "MESSAGE" "TASK" "EVENT" "POLL" "MORE" options
     Examples:
       | userType  |
       | hr        |

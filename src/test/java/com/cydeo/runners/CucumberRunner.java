@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
-        dryRun = true,
-        tags = "@B34G5-134",
+        dryRun = false,
+        tags = "@B34G5-132",
         publish = true //generating a report with public link
 )
 public class CucumberRunner {}
