@@ -13,8 +13,25 @@ public class ActivityStreamStepDef {
 
 
     @Then("user clicks {string} to see {string} {string} {string} {string}")
-    public void user_clicks_to_see(String string, String string2, String string3, String string4, String string5) {
+    public void user_clicks_to_see(String more, String file, String appreciation, String announcement, String workflow) {
 
+       homePage.moreTab.click();
+
+        // File
+        Assert.assertEquals(homePage.fileTab.getText(), file);
+        homePage.fileTab.isDisplayed();
+
+        // Appreciation
+        Assert.assertEquals(homePage.appreciationTab.getText(), appreciation);
+        homePage.appreciationTab.isDisplayed();
+
+        // Announcement
+        Assert.assertEquals(homePage.announcementTab.getText(), announcement);
+        homePage.announcementTab.isDisplayed();
+
+        // Workflow
+       Assert.assertEquals(homePage.workflowTab.getText(), workflow);
+       homePage.workflowTab.isDisplayed();
     }
 
 
