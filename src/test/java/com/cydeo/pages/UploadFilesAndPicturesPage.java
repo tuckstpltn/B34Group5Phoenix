@@ -8,9 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 public class UploadFilesAndPicturesPage {
 
 
+
+
     public UploadFilesAndPicturesPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+    @FindBy(xpath = "//a[@title ='Activity Stream']")
+    public WebElement activityStream;
 
     @FindBy(xpath = "(//span[.='More'])[1]")
     public WebElement moreDropdown;
@@ -26,4 +31,9 @@ public class UploadFilesAndPicturesPage {
 
     @FindBy(xpath = "(//button[@id='blog-submit-button-cancel'])[1]")
     public WebElement cancelButton;
+
+    public void uploadFile(String fileName) {
+        uploadFilesAndImages.click();
+    }
+    public WebElement uploadedFile;
 }
