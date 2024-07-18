@@ -1,6 +1,7 @@
 package com.cydeo.pages;
 
 import com.cydeo.utilities.Driver;
+import com.fasterxml.jackson.core.JsonParser;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -33,7 +34,10 @@ public class UploadFilesAndPicturesPage {
     public WebElement cancelButton;
 
     public void uploadFile(String fileName) {
-        uploadFilesAndImages.click();
+        String fileSeparator = System.getProperty("file.separator");
+        String path = System.getProperty("user.dir") + fileSeparator + "src/test/resources/files" + fileSeparator + fileName;
+        uploadFilesAndImages.sendKeys(path);
+
     }
-    public WebElement uploadedFile;
+
 }
