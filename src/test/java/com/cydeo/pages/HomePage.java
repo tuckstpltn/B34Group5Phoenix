@@ -78,9 +78,6 @@ public class HomePage {
     @FindBy(id="blog-submit-button-cancel")
     public WebElement cancelMessageBtn;
 
-    // Message Text Box
-    @FindBy(xpath = "//div[@class='feed-add-post-text']")
-    public WebElement messageTextBox;
 
     // Message iFrame
     @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
