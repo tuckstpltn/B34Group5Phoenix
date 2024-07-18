@@ -60,6 +60,7 @@ public class HomePage {
     @FindBy(xpath = "(//span[.='Workflow'])[2]")
     public WebElement workflowTab;
 
+
     //-----------Message Tabs------------
     // Message Block
     @FindBy(id = "microoPostFormLHE_blogPostForm_inner")
@@ -70,7 +71,7 @@ public class HomePage {
     public WebElement sendButton;
 
     // All Employee
-    @FindBy(xpath = "(//span[.='All employees'])[3]")
+    @FindBy(xpath = "//span[@data-id='UA']/span")
     public WebElement allEmployeeOption;
 
     // Cancel Message Button
@@ -80,6 +81,22 @@ public class HomePage {
     // Message Text Box
     @FindBy(xpath = "//div[@class='feed-add-post-text']")
     public WebElement messageTextBox;
+
+    // Message iFrame
+    @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
+    public WebElement messageIFrame;
+
+    // Message iFrame Body
+    @FindBy(xpath = "//body[@contenteditable='true']")
+    public WebElement iFrameBody;
+
+    // Message Error: Title Not Specified
+    @FindBy(xpath = "//span[.='The message title is not specified']")
+    public WebElement titleNotSpecifiedErrorMessage;
+
+    // Message Error: Recipient Not Specified
+    @FindBy(xpath = "//span[.='Please specify at least one person.']")
+    public WebElement recipientNotSpecifiedErrorMessage;
 
 
 
