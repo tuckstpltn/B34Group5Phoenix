@@ -18,14 +18,16 @@ public class UploadFilesAndPicturesPage {
     @FindBy(xpath = "//a[@title ='Activity Stream']")
     public WebElement activityStream;
 
-    @FindBy(xpath = "(//span[.='More'])[1]")
-    public WebElement moreDropdown;
-
-    @FindBy (xpath = "(//span[.='File'])[1]")
-    public WebElement fileDropdown;
-
-    @FindBy (xpath = "(//span[.='Upload files and images'])[1]")
-    public WebElement uploadFilesAndImages;
+//    @FindBy(xpath = "(//span[.='More'])[1]")
+//    public WebElement moreDropdown;
+//
+//    @FindBy (xpath = "(//span[.='File'])[1]")
+//    public WebElement fileDropdown;
+//
+//    @FindBy (xpath = "(//span[.='Upload files and images'])[1]")
+//    public WebElement uploadFilesAndImages;
+@FindBy(xpath = "")
+public WebElement activityStream;
 
     @FindBy (xpath = "(//span[@id='check-in-text-n3654'])[1]")
     public WebElement insertInText;

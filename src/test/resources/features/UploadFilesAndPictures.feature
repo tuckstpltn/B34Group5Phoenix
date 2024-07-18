@@ -5,13 +5,13 @@ Feature: As a user, I should be able to upload files and pictures as messages.
     Then user clicks on Activity Stream
     Then user clicks on More dropdown field
     And user sees and clicks on File page
-    When user upload the files "pdf"
-    Then user should be able to see "pdf" in the uploaded files
+    When user upload the files "<fileType>"
+    Then user should be able to see "<fileType>" in the uploaded files
 
 
     Examples:
-      | userType  |  |
-      | marketing |  |
+      | userType  | fileType      |
+      | marketing | jpeg_43-2.jpg |
 
 
   Scenario: Verify that the user can insert the files and images into the text
