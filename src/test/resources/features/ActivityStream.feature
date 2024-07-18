@@ -4,7 +4,6 @@ Feature: Default
   Background: user is already on the login page
     Given user is on the login page
 
-
   @B34G5-133
   Scenario Outline: Verify that the user views the following 4 options under the MORE tab.
     Given user logs in as "<userType>"

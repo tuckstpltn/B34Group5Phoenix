@@ -12,25 +12,21 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    // Locators
+    //-------------------Locators-----------------
 
     @FindBy(id = "user-block")
     public WebElement usernameBlock;
-
 
     // @FindBy(xpath = "//div[@class='menu-popup']")
     @FindBy(linkText = "My Profile")
     public WebElement myProfileLink;
 
-
-    // Activity Stream Tabs
-
+    //-------------Activity Stream Tabs--------------
     // Message Tab
     @FindBy(xpath = "(//span[.='Message'])[2]")
     public WebElement messageTab;
 
     // Task Tab
-
     @FindBy(xpath = "(//span[.='Task'])[2]")
     public WebElement taskTab;
 
@@ -63,6 +59,28 @@ public class HomePage {
     // Workflow Tab (under More)
     @FindBy(xpath = "(//span[.='Workflow'])[2]")
     public WebElement workflowTab;
+
+    //-----------Message Tabs------------
+    // Message Block
+    @FindBy(id = "microoPostFormLHE_blogPostForm_inner")
+    public WebElement messageBlock;
+
+    // Send Button
+    @FindBy(id = "blog-submit-button-save")
+    public WebElement sendButton;
+
+    // All Employee
+    @FindBy(xpath = "(//span[.='All employees'])[3]")
+    public WebElement allEmployeeOption;
+
+    // Cancel Message Button
+    @FindBy(id="blog-submit-button-cancel")
+    public WebElement cancelMessageBtn;
+
+    // Message Text Box
+    @FindBy(xpath = "//div[@class='feed-add-post-text']")
+    public WebElement messageTextBox;
+
 
 
 }
