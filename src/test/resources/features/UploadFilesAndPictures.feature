@@ -2,9 +2,9 @@ Feature: As a user, I should be able to upload files and pictures as messages.
 
   Scenario Outline: Verify that all <userType> can upload files and pictures Supported file formats .pdf, .txt, .jpeg, .png, .docx.
     When user logs in as "<userType>"
-    Then user clicks on Activity Stream
-    Then user clicks on More dropdown field
-    And user sees and clicks on File page
+    And user clicks on Activity Stream
+    And user clicks send message block
+    And user clicks Upload area with exact id "bx-b-uploadfile-blogPostForm"
     When user upload the files "<fileType>"
     Then user should be able to see "<fileType>" in the uploaded files
 

@@ -12,6 +12,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import static com.cydeo.pages.UploadFilesAndPicturesPage.clickElementWithExactId;
 import static com.cydeo.utilities.BrowserUtils.waitFor;
 
 public class UploadFilesAndPicturesStepDef {
@@ -22,22 +23,21 @@ public class UploadFilesAndPicturesStepDef {
         uploadFilesAndPicturesPage.activityStream.click();
     }
 
-    @Then("user clicks on More dropdown field")
-    public void userClicksOnMoreDropdownField() {
-        BrowserUtils.sleep(5);
-        uploadFilesAndPicturesPage.moreDropdown.click();
-    }
 
-    @And("user sees and clicks on File page")
-    public void userSeesAndClicksOnFilePage() {
-        BrowserUtils.sleep(5);
-        uploadFilesAndPicturesPage.fileDropdown.click();
+
+
+
+    @When("user clicks {word} {word} with exact id {string}")
+    public void user_clicks_send_button_with_exact_id(String ignoredWord1, String ignoredWord2, String id) {
+        clickElementWithExactId(id);
+
     }
 
     @When("user upload the files {string}")
     public void user_upload_the_files(String fileName) {
         uploadFilesAndPicturesPage.uploadFile(fileName);
     }
+
     @Then("user should be able to see {string} in the uploaded files")
     public void user_should_be_able_to_see_in_the_uploaded_files(String fileName) {
         waitFor(3);
