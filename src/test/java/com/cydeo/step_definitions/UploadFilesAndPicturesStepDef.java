@@ -24,8 +24,7 @@ public class UploadFilesAndPicturesStepDef {
     }
 
 
-
-
+    
 
     @When("user clicks {word} {word} with exact id {string}")
     public void user_clicks_send_button_with_exact_id(String ignoredWord1, String ignoredWord2, String id) {
