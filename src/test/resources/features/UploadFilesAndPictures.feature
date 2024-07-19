@@ -12,6 +12,8 @@ Feature: As a user, I should be able to upload files and pictures as messages.
     Examples:
       | userType  | fileType      |
       | marketing | jpeg_43-2.jpg |
+      | hr        | jpeg_43-2.jpg |
+      | helpdesk  | jpeg_43-2.jpg |
 
 
   Scenario: Verify that the user can insert the files and images into the text
