@@ -10,16 +10,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import static com.cydeo.pages.UploadFilesAndPicturesPage.clickElementWithExactId;
 import static com.cydeo.utilities.BrowserUtils.waitFor;
 
 public class UploadFilesAndPicturesStepDef {
+
     UploadFilesAndPicturesPage uploadFilesAndPicturesPage = new UploadFilesAndPicturesPage();
 
     @Then("user clicks on Activity Stream")
     public void userClicksOnActivityStream() {
+
         uploadFilesAndPicturesPage.activityStream.click();
     }
 
@@ -46,35 +49,38 @@ public class UploadFilesAndPicturesStepDef {
     }
 
 
-
-
-
-
-
-    @Given("the user is on the text editor page")
+    @When("the user is on the text editor page")
     public void the_user_is_on_the_text_editor_page() {
-
-
-    }
-
-    @When("the user uploads a file or image")
-    public void the_user_uploads_a_file_or_image() {
-
+      uploadFilesAndPicturesPage.textEditorPage.isDisplayed();
 
     }
 
     @When("the user inserts the uploaded file or image into the text")
     public void the_user_inserts_the_uploaded_file_or_image_into_the_text() {
-
+       uploadFilesAndPicturesPage.inTextInsertBtn.click();
 
     }
 
     @Then("the file or image should be inserted into the text successfully")
     public void the_file_or_image_should_be_inserted_into_the_text_successfully() {
-
+       Assert.assertTrue(uploadFilesAndPicturesPage.uploadedFile.isDisplayed());
 
     }
 
 
+    @When("the user decides to remove a file or image")
+    public void theUserDecidesToRemoveAFileOrImage() {
+        uploadFilesAndPicturesPage.cancelBtn_submit.click();
+    }
 
+    @Then("the file or image should be removed successfully")
+    public void theFileOrImageShouldBeRemovedSuccessfully() {
+
+        try {
+            Assert.assertFalse("the file or image should be removed successfully", uploadFilesAndPicturesPage.textEditorPage.isDisplayed());
+        } catch (NoSuchElementException e) {
+            // If the element is not found, that means it is not visible, which is expected
+            System.out.println("the file or image should be removed successfully");
+        }
+    }
 }

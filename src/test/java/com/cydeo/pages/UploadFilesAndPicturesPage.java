@@ -37,6 +37,15 @@ public class UploadFilesAndPicturesPage {
     public WebElement uploadedFile;
 
 
+    @FindBy(xpath = "//span[@class='insert-btn']")
+    public WebElement inTextInsertBtn;
+
+    @FindBy (xpath = "//button[@id = 'blog-submit-button-cancel']")
+    public WebElement cancelBtn_submit;
+
+    @FindBy (xpath = "//input[@name='POST_MESSAGE']")
+    public WebElement textEditorPage;
+
 //    @FindBy (xpath = "(//span[@id='check-in-text-n3654'])[1]")
 //    public WebElement insertInText;
 //
