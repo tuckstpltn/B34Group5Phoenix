@@ -10,10 +10,22 @@ Feature: As a user, I should be able to upload files and pictures as messages.
 
 
     Examples:
-      | userType  | fileType      |
-      | marketing | jpeg_43-2.jpg |
-      | hr        | jpeg_43-2.jpg |
-      | helpdesk  | jpeg_43-2.jpg |
+      | userType  | fileType      |  |  |
+      | marketing | jpeg_43-2.jpg |  |  |
+      | hr        | jpeg_43-2.jpg |  |  |
+      | helpdesk  | jpeg_43-2.jpg |  |  |
+
+    Examples:
+      | userType  | fileType                                                                                  |
+      | marketing | png-transparent-spider-man-heroes-download-with-transparent-background-free-thumbnail.png |
+      | hr        | png-transparent-spider-man-heroes-download-with-transparent-background-free-thumbnail.png |
+      | helpdesk  | png-transparent-spider-man-heroes-download-with-transparent-background-free-thumbnail.png |
+
+    Examples:
+      | userType  | fileType               |
+      | marketing | Selenium_Hierarchy.pdf |
+      | hr        | Selenium_Hierarchy.pdf |
+      | helpdesk  | Selenium_Hierarchy.pdf |
 
 
   Scenario: Verify that the user can insert the files and images into the text
