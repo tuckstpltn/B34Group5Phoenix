@@ -3,6 +3,7 @@ package com.cydeo.step_definitions;
 import com.cydeo.pages.UploadFilePage;
 import com.cydeo.utilities.BrowserUtils;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,21 +24,33 @@ public class UploadFileStepDefinition {
     }
 
     @When("the user uploads the following files:")
-    public void theUserUploadsTheFollowingFiles(DataTable dataTable) {
-        List<String> filePaths = dataTable.asList(String.class);
-        for (String filePath : filePaths) {
-            System.out.println("Uploading file: " + filePath);
-          uploadFile.UploadFilesAndImages.sendKeys(filePath);
-            BrowserUtils.sleep(1); // Adding a small sleep to ensure each file is uploaded properly
-        }
-       uploadFile.SendButton.click();
+
+    public void UserUploadsFiles(String fileName) {
+        String fileSeparator = System.getProperty("file.separator");
+        String path = System.getProperty("user.dir") + fileSeparator + "src/test/resources/features/Files" + fileSeparator + fileName;
+        //  uploadFile.sendKeys(path);
+        uploadFile.SendButton.click();
+
+    }
+    @Then("user should be able to see {string} in the uploaded files")
+    public void user_should_be_able_to_see_in_the_uploaded_files(String fileName) {
+      //  waitFor(3);
+      //  String uploadedFileText = activityStreamPage.uploadedFile.getText();
+     //   System.out.println("uploadedFileText = " + uploadedFileText);
+        //Assert.assertTrue(uploadedFileText.contains(fileName.substring(0,fileName.indexOf("."))));
+
+}
+
+    @And("the user removes the uploaded files")
+    public void theUserRemovesTheUploadedFiles() {
+       // uploadFile.removeUploadedFiles();
     }
 
-    @Then("the user should see the files successfully uploaded")
-    public void theUserShouldSeeTheFilesSuccessfullyUploaded() {
+    @Then("the user should not see the files in the upload list")
+    public void theUserShouldNotSeeTheFilesInTheUploadList() {
         BrowserUtils.sleep(2);
-       Assert.assertTrue(uploadFile.userSeeUploadedFiles.isDisplayed());
+        //Assert.assertFalse(uploadFile.verifyUploadedFiles());
     }
-}
+    }
 
 

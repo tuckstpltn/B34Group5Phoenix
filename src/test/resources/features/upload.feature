@@ -23,3 +23,17 @@ Feature: Upload files and pictures while sending appreciation
     Examples:
       | userType |
       | hr
+
+
+  Scenario: Verify that the user can remove files and images at any time before sending
+    Given the user is on the appreciation page
+    When the user uploads the following files:
+      | filePath                  |
+      | path/to/file.pdf          |
+      | path/to/file.txt          |
+      | path/to/file.jpeg         |
+      | path/to/file.png          |
+      | path/to/file.docx         |
+    And the user removes the uploaded files
+    Then the user should not see the files in the upload list
+

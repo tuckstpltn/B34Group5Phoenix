@@ -5,12 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class UploadFilePage {
     public UploadFilePage() {
         PageFactory.initElements(Driver.getDriver(), this);}
 
         // Locators
-
+        public List<WebElement> profileOptions;
         @FindBy(xpath = "(//span[.='Appreciation'])[2]")
         public WebElement appreciationPageButton;
 
@@ -19,10 +21,7 @@ public class UploadFilePage {
     @FindBy(xpath = "(//input[@class='diskuf-fileUploader wd-test-file-light-inp '])[1]")
     public WebElement UploadFilesAndImages;
 
-        @FindBy(xpath = "//a[@class='files-path']")
-        public WebElement userSeeUploadedFiles;
-
-        @FindBy(xpath = "//button[@id='blog-submit-button-save']")
+    @FindBy(xpath = "//button[@id='blog-submit-button-save']")
         public WebElement SendButton;
 
 
