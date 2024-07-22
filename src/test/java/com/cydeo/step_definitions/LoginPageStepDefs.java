@@ -15,8 +15,8 @@ public class LoginPageStepDefs {
 
         @Given("user is on the login page")
         public void userIsOnTheLoginPage() {
-        //System.out.println("DONE IN HOOKS");
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        System.out.println("DONE IN HOOKS");
+        //Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
         }
 
