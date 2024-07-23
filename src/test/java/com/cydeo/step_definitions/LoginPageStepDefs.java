@@ -15,19 +15,21 @@ public class LoginPageStepDefs {
 
         @Given("user is on the login page")
         public void userIsOnTheLoginPage() {
-            System.out.println("DONE IN HOOKS");
-            //Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        System.out.println("DONE IN HOOKS");
+        //Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
         }
 
 
         @When("user logs in as {string}")
         public void user_logs_in_as(String userType) {
+
             loginPage.login(userType);
         }
 
         @Then("user should be able to see {string} as page title")
         public void userShouldLandOnHomePageWith(String title) {
+
             BrowserUtils.verifyTitleContains(title);
         }
 
